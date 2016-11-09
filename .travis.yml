@@ -1,0 +1,7 @@
+language: csharp
+solution: MyGame.sln
+mono: latest
+install:
+ - nuget restore MyGame.sln
+script:
+ - xbuild /p:Configuration=Debug-Windows MyGame.sln
