@@ -93,7 +93,13 @@ namespace MyGame
 					if (SwinGame.KeyTyped (KeyCode.vk_LEFT))
 						p.NavigateLeft ();
 					else if (SwinGame.KeyTyped (KeyCode.vk_RIGHT))
-						p.NavigateRight ();	
+						p.NavigateRight ();		
+					else if (SwinGame.KeyTyped (KeyCode.vk_UP))
+						p.NavigateForward ();	
+					else if (SwinGame.KeyTyped (KeyCode.vk_DOWN))
+						p.NavigateBackwards ();	
+					else if (SwinGame.KeyTyped (KeyCode.vk_SPACE) && !p.Jumping)
+						p.Jump ();	
 					p.Draw ();
 
 					SwinGame.DrawText ("Score:"+ s.Score.ToString(), Color.Black, 10, 100);
